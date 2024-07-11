@@ -1,0 +1,28 @@
+:root {
+    --color-primary: #d73953;
+    --color-black: #090909;
+    --color-white: #ffffff;
+    --color-light-grey: #f3f3f3;
+    --color-dark-grey: #353535;
+    --text-color: var(--color-black);
+}
+
+body {
+    color: var(--text-color); /* Set the text color for the body */
+}
+
+a {
+    color: var(--text-color); /* Set the text color for all anchor elements */
+}
+
+.visually-hidden {
+    display: none; /* Hide elements with the class visually-hidden */
+}
+
+.card-category {
+    color: var(--color-primary); /* Set the text color for elements with the class card-category */
+}
+
+.section-tagline {
+    color: var(--color-primary); /* Set the text color for elements with the class section-tagline */
+}
