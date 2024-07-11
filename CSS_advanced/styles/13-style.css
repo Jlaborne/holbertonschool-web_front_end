@@ -6,23 +6,23 @@ body {
     color: #161616;
 }
 
-a[href]:link {
+a:link {
     color: #161616;
     text-decoration: none; /* Ensuring no text decoration for anchor elements */
 }
 
 /* Targeting visited state for links */
-a[href]:visited {
+a:visited {
     font-style: italic; /* Italicize the text */
 }
 
 /* Targeting hover state for links */
-a[href]:hover {
+a:hover {
     text-decoration: underline; /* Underline the text on hover */
 }
 
 /* Targeting active state for links */
-a[href]:active {
+a:active {
     background-color: var(--color-light-grey); /* Set background color to color-light-grey */
 }
 
