@@ -1,20 +1,14 @@
 html {
     scroll-behavior: smooth;
-    font-size: 62.5%; /* This sets the base font size to 10px if the default is 16px */
 }
 
 body {
-    color: var(--text-color);
-    font-family: var(--font-family-base);
-    font-size: var(--font-size-medium);
-    font-weight: var(--font-weight-regular);
-    line-height: var(--line-height-base);
-    margin: 0;
+    color: #161616;
 }
 
 a:link {
-    color: var(--text-color); 
-    text-decoration: none; /* Ensuring no text decoration for unvisited anchor elements */
+    color: #161616;
+    text-decoration: none; /* Ensuring no text decoration for anchor elements */
 }
 
 /* Targeting visited state for links */
@@ -32,34 +26,6 @@ a:active {
     background-color: var(--color-light-grey); /* Set background color to color-light-grey */
 }
 
-.visually-hidden {
-    display: none; /* Hide elements with the class visually-hidden */
-}
-
-.card-category {
-    color: var(--color-primary); /* Set the text color for elements with the class card-category */
-}
-
-.section-title {
-    font-family: var(--font-family-title);
-    font-size: var(--font-size-xx-large);
-    font-weight: var(--font-weight-bold);
-    margin: var(--section-title-margin);
-    color: var(--section-title-color);
-}
-
-.section-tagline {
-    color: var(--color-primary); /* Set the text color for elements with the class section-tagline */
-    font-family: var(--font-family-title); /* Set the font family to font-family-title */
-    text-transform: var(--section-tagline-transform); /* Transform the text using section-tagline-transform */
-    font-weight: var(--font-weight-bold); /* Set the font weight to font-weight-bold */
-}
-
-h1, h2, h3, h4, h5, h6 {
-    font-family: var(--font-family-title);
-    font-weight: var(--font-weight-bold);
-}
-
 :root {
     --color-primary: #d73953;
     --color-black: #090909;
@@ -67,8 +33,8 @@ h1, h2, h3, h4, h5, h6 {
     --color-light-grey: #f3f3f3;
     --color-dark-grey: #353535;
     --text-color: var(--color-black);
-    --font-family-base: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    --font-family-title: 'Raleway', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    --font-family-base: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif; /* Updated */
+    --font-family-title: Raleway, 'Helvetica Neue', Helvetica, Arial, sans-serif; /* Updated */
     --font-size-small: 1.2rem;
     --font-size-medium: 1.6rem;
     --font-size-large: 1.8rem;
@@ -80,11 +46,55 @@ h1, h2, h3, h4, h5, h6 {
     --line-height-base: 1.5; /* Custom property for base line height */
     --line-height-big: 1.8; /* Custom property for big line height */
     --section-header-align: center; /* Custom property for section header alignment */
-    --section-tagline-transform: uppercase; /* Custom property for section tagline text transform */
-    --section-title-margin: 0; /* Custom property for section title margin */
-    --section-title-color: var(--color-black); /* Custom property for section title color */
+    --section-tagline-transform: uppercase;
+    --section-title-margin: 0;
+    --section-title-color: var(--color-black);
+}
+
+body {
+    color: var(--text-color);
+    font-family: var(--font-family-base);
+    font-size: var(--font-size-medium);
+    font-weight: var(--font-weight-regular);
+    line-height: var(--line-height-base);
+}
+
+a {
+    color: var(--text-color); /* Set the text color for all anchor elements */
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-family-title);
+    font-weight: var(--font-weight-bold);
+}
+
+html {
+    font-size: 62.5%; /* This sets the base font size to 10px if the default is 16px */
+}
+
+.visually-hidden {
+    display: none; /* Hide elements with the class visually-hidden */
+}
+
+.card-category {
+    color: var(--color-primary); /* Set the text color for elements with the class card-category */
 }
 
 .section-header {
     text-align: var(--section-header-align); /* Set horizontal alignment using custom property */
+}
+
+.section-tagline {
+    color: var(--color-primary); /* Set the text color for elements with the class section-tagline */
+    font-family: var(--font-family-title); /* Set the font family to font-family-title */
+    text-transform: var(--section-tagline-transform); /* Transform the text using section-tagline-transform */
+    font-weight: var(--font-weight-bold); /* Set the font weight to font-weight-bold */
+}
+
+.section-title {
+    font-family: var(--font-family-title);
+    font-size: var(--font-size-xx-large);
+    font-weight: var(--font-weight-bold);
+    margin: var(--section-title-margin);
+    color: var(--section-title-color);
 }
