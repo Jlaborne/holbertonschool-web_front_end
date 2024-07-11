@@ -29,8 +29,8 @@ a {
     --color-light-grey: #f3f3f3;
     --color-dark-grey: #353535;
     --text-color: var(--color-black);
-    --font-family-base: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif; /* Updated */
-    --font-family-title: "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif; /* Updated */
+    --font-family-base: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    --font-family-title: 'Helvetica Neue', Helvetica, Arial, sans-serif;
     --font-size-small: 1.2rem;
     --font-size-medium: 1.6rem;
     --font-size-large: 1.8rem;
@@ -38,9 +38,6 @@ a {
     --font-size-xx-large: 4.8rem;
     --font-weight-regular: 400; /* Custom property for regular font weight */
     --font-weight-bold: 700; /* Custom property for bold font weight */
-    --line-height-small: 1.2; /* Custom property for small line height */
-    --line-height-base: 1.5; /* Custom property for base line height */
-    --line-height-big: 1.8; /* Custom property for big line height */
 }
 
 body {
@@ -48,7 +45,6 @@ body {
     font-family: var(--font-family-base);
     font-size: var(--font-size-medium);
     font-weight: var(--font-weight-regular);
-    line-height: var(--line-height-base);
 }
 
 a {
