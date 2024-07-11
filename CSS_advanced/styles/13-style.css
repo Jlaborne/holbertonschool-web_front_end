@@ -6,7 +6,7 @@ body {
     color: #161616;
 }
 
-a[href] {
+a[href]:link {
     color: #161616;
     text-decoration: none; /* Ensuring no text decoration for anchor elements */
 }
