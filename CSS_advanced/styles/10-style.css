@@ -43,6 +43,7 @@ a {
     --line-height-base: 1.5; /* Custom property for base line height */
     --line-height-big: 1.8; /* Custom property for big line height */
     --section-header-align: center; /* Custom property for section header alignment */
+    --section-tagline-transform: uppercase;
 }
 
 body {
@@ -54,8 +55,7 @@ body {
 }
 
 a {
-    color: var(--text-color);
-    /* Set the text color for all anchor elements */
+    color: var(--text-color); /* Set the text color for all anchor elements */
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -68,13 +68,11 @@ html {
 }
 
 .visually-hidden {
-    display: none;
-    /* Hide elements with the class visually-hidden */
+    display: none; /* Hide elements with the class visually-hidden */
 }
 
 .card-category {
-    color: var(--color-primary);
-    /* Set the text color for elements with the class card-category */
+    color: var(--color-primary); /* Set the text color for elements with the class card-category */
 }
 
 .section-header {
@@ -82,6 +80,8 @@ html {
 }
 
 .section-tagline {
-    color: var(--color-primary);
-    /* Set the text color for elements with the class section-tagline */
+    color: var(--color-primary); /* Set the text color for elements with the class section-tagline */
+    font-family: var(--font-family-title); /* Set the font family to font-family-title */
+    text-transform: var(--section-tagline-transform); /* Transform the text using section-tagline-transform */
+    font-weight: var(--font-weight-bold); /* Set the font weight to font-weight-bold */
 }
