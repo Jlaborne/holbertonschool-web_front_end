@@ -237,7 +237,7 @@ template {
 }
 
 .section-header {
-    text-align: var(--section-body-padding);
+    text-align: var(--section-header-padding);
 }
 
 .section-body {
