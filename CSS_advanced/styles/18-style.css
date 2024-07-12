@@ -285,14 +285,14 @@ template {
     float: right;
 }
 
-nav {
+.nav {
     margin: 0;
     padding: 0;
     list-style: none;
     text-align: center;
 }
 
-nav .nav-item {
+.nav .nav-item {
     font-family: var(--nav-item-font-family);
     font-weight: var(--nav-item-font-weight);
     font-size: var(--nav-item-font-size);
@@ -301,11 +301,11 @@ nav .nav-item {
     margin: var(--nav-item-margin);
 }
 
-nav .nav-link {
+.nav .nav-link {
     display: block;
     padding: 0.5rem 1rem; /* 0.5rem is half of 1rem (root element) */
 }
 
-nav .nav-link:hover {
+.nav .nav-link:hover {
     color: var(--nav-item-link-hover);
 }
