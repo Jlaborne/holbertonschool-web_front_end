@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <title>Task 6</title>
+    <script
+      src="https://code.jquery.com/jquery-3.6.4.slim.min.js"
+      integrity="sha384-uwp5x7N7phOUg9TO8LP3EmEORzDrNOn7D2xc3UKcS5KNdxBO+wX8WY3sJ3IbMBc6"
+      crossorigin="anonymous"
+    ></script>
+    <script type="application/javascript">
+      function createFamilyTree() {
+        const table = `
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Firstname</th>
+                            <th>Lastname</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            `;
+        $("body").append(table);
+      }
+
+      function addNewMember(firstName, lastName, position) {
+        const row = $("<tr>")
+          .append($("<td>").text(firstName))
+          .append($("<td>").text(lastName))
+          .append(
+            $("<td>")
+              .text("(x)")
+              .css("background", "orange")
+              .on("click", function () {
+                $(this).parent().remove();
+              })
+          );
+
+        if (position === "before") {
+          $("table tbody").prepend(row);
+        } else {
+          $("table tbody").append(row);
+        }
+      }
+
+      function createForm() {
+        const form = `
+                <form id="familyForm">
+                    <input type="text" placeholder="First Name">
+                    <input type="text" placeholder="Last Name">
+                    <select>
+                        <option value="before">Before</option>
+                        <option value="after">After</option>
+                    </select>
+                    <input type="submit" value="Add Member">
+                </form>
+            `;
+        $("body").prepend(form);
+
+        $("#familyForm").on("submit", function (e) {
+          e.preventDefault();
+          const firstName = $(this).find("input:nth-of-type(1)").val();
+          const lastName = $(this).find("input:nth-of-type(2)").val();
+          const position = $(this).find("select").val();
+          addNewMember(firstName, lastName, position);
+          this.reset();
+        });
+      }
+
+      $(document).ready(() => {
+        createFamilyTree();
+        createForm();
+      });
+    </script>
+  </head>
+
+  <body></body>
+</html>

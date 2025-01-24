@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <title>Task 1</title>
+    <script
+      src="https://code.jquery.com/jquery-3.6.4.slim.min.js"
+      integrity="sha384-uwp5x7N7phOUg9TO8LP3EmEORzDrNOn7D2xc3UKcS5KNdxBO+wX8WY3sJ3IbMBc6"
+      crossorigin="anonymous"
+    ></script>
+    <script type="application/javascript">
+      function createTextElement() {
+        // Create a paragraph element and set its content
+        const paragraph = $("<p>").text(
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed in diam risus. Nunc sit amet euismod ipsum. Aenean tempus ex sed est volutpat, sed sodales velit tempus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Proin auctor sollicitudin eleifend. Vivamus porta enim vitae mauris commodo, vitae tempor tellus elementum. Quisque sed pellentesque nulla, at eleifend nisi. Phasellus eget tincidunt ex. Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+        );
+        // Append the paragraph to the body
+        $("body").append(paragraph);
+      }
+
+      // Call the function
+      $(document).ready(createTextElement);
+    </script>
+  </head>
+
+  <body></body>
+</html>
