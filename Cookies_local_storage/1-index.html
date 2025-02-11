@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cookie Example</title>
+    <style></style>
+  </head>
+  <body>
+    <h2>Login Form</h2>
+    <div class="input-container">
+      <input type="text" id="firstname" placeholder="Firstname" />
+
+      <input type="email" id="email" placeholder="Email" />
+
+      <button onclick="setCookies()">Log me in</button>
+    </div>
+    <br />
+    <h2>Cookies</h2>
+    <div class="cookie-container">
+      <button onclick="showCookies()">Show the cookies</button>
+    </div>
+
+    <script>
+      function setCookies() {
+        const firstname = document.getElementById("firstname").value;
+        const email = document.getElementById("email").value;
+
+        if (firstname && email) {
+          // Calculate expiration date (10 days from now)
+          let date = new Date();
+          date.setTime(date.getTime() + 10 * 24 * 60 * 60 * 1000); // 10 days in milliseconds
+          let expires = `expires=${date.toUTCString()}`;
+
+          // Set cookies with expiration
+          document.cookie = `firstname=${firstname}; ${expires}; path=/`;
+          document.cookie = `email=${email}; ${expires}; path=/`;
+
+          alert("Cookies set successfully!");
+        } else {
+          alert("Please fill in both fields.");
+        }
+      }
+
+      function showCookies() {
+        const cookies = document.cookie;
+
+        // Remove existing paragraph before adding a new one
+        let existingP = document.getElementById("cookieDisplay");
+        if (existingP) {
+          existingP.remove();
+        }
+
+        // Create a new <p> element
+        const p = document.createElement("p");
+        p.id = "cookieDisplay";
+        p.innerHTML = `Cookies: ${cookies}`;
+        document.body.appendChild(p);
+      }
+    </script>
+  </body>
+</html>

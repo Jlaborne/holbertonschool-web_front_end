@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shopping Cart with Local Storage</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        padding: 20px;
+      }
+
+      h2 {
+        font-size: 1.5em;
+        font-weight: bold;
+        margin-top: 20px;
+      }
+
+      ul {
+        list-style-type: none;
+        padding: 0;
+      }
+
+      li {
+        padding: 10px;
+        border: 1px solid #ccc;
+        margin: 5px 0;
+        cursor: pointer;
+        background-color: #f5f5f5;
+      }
+
+      li:hover {
+        background-color: #e0e0e0;
+      }
+
+      #cart-message {
+        font-size: 1.2em;
+        margin-top: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Available Items</h2>
+    <div id="store"></div>
+
+    <script>
+      const availableItems = ["Shampoo", "Soap", "Sponge", "Water"];
+
+      function checkLocalStorage() {
+        if (!window.localStorage) {
+          alert(
+            "Sorry, your browser does not support Web Storage. Try again with a better one."
+          );
+          return false;
+        }
+        return true;
+      }
+
+      function addItemToCart(item) {
+        localStorage.setItem(item, "true");
+        displayCart();
+      }
+
+      function createStore() {
+        const storeContainer = document.getElementById("store");
+        const ul = document.createElement("ul");
+
+        availableItems.forEach((item) => {
+          const li = document.createElement("li");
+          li.textContent = item;
+          li.onclick = () => addItemToCart(item);
+          ul.appendChild(li);
+        });
+
+        storeContainer.appendChild(ul);
+      }
+
+      function displayCart() {
+        const cartItems = Object.keys(localStorage);
+        if (cartItems.length === 0) return;
+
+        let existingMessage = document.getElementById("cart-message");
+        if (existingMessage) {
+          existingMessage.remove();
+        }
+
+        const message = document.createElement("p");
+        message.id = "cart-message";
+        message.textContent = `You previously had ${cartItems.length} items in your cart.`;
+        document.body.appendChild(message);
+      }
+
+      if (checkLocalStorage()) {
+        createStore();
+        displayCart();
+      }
+    </script>
+  </body>
+</html>
